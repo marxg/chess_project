@@ -1,14 +1,15 @@
 # Readme
-## Project 4
+## Chess - Unsupervised Learning
 
-### Assignment: 
-Use unsupervised learning to deduce principles of good play in chess
+### Description: 
+The goal of this project is to create chess hueristics using unsupervised learning. 
+
+### Instructions:
+
 
 ### File Directory:
-- __populate_mongo__: Push games into a mongodb
-- __functions_for_features__: Add engineered features to the db - feature development analogous to that seen in NLP
-- __analysis__: Looking at results from choosing combinations of different features, dimension reduction techniques, and clustering parameters
-- __chess_slides_v2__: Presentation slides
+- __main__: """"
+
 
 
 
