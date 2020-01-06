@@ -25,6 +25,7 @@ In the images folder, you will find two subfolders PCA and NMF. These names refe
 ### File Directory:
 - chess_project.py: Contains scripts for loading data from database, performing clustering, and creating vizualizations
 - chess_slides_v2.pdf: Slides prepared for Metis ~ 11/2019
+- requirements.txt: Required software and packages
 
 
 
