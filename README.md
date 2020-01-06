@@ -8,7 +8,8 @@ The goal of this project is to create chess hueristics using unsupervised learni
 
 
 ### File Directory:
-- __main__: """"
+- chess_project.py: Contains scripts for loading data from database, performing clustering, and creating vizualizations
+-
 
 
 
