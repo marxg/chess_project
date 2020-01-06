@@ -14,10 +14,7 @@ from sklearn.metrics.pairwise import cosine_similarity, pairwise_distances
 from sklearn.feature_extraction.text import TfidfTransformer 
 from pymongo import MongoClient
 
-
 # from chess.pgn import read_game
-# import chess
-# import chess.svg
 
 def load_features(moves=80, exclude_elo=[1350,1750], Tfidf=False, features='sqr_attacks'):
     """
@@ -83,15 +80,15 @@ def reduce_cluster(reducer=PCA, components=30, clusters=10, features='sqr_attack
     re=reducer(n_components=components)
     reduced_bag=re.fit_transform(bag_of_features)
     #PRINT OUT OF METRICS 
-    print(f"{re_name}:")
-    if re_name=='PCA':
-        print(f"Explained variance ratio sum {sum(re.explained_variance_ratio_)}")
-        #print(f"Explained variance ratios {re.explained_variance_ratio_}")
-        #print(f"Singular values {re.singular_values_}")
-        #print("Top ten features of first component:")
-        #pprint(sorted(list(zip(re.components_[0], feature_names)), reverse=True)[:10])
-    if re_name=='NMF':
-        print(f"Error-norm ratio {re.reconstruction_err_/np.linalg.norm(bag_of_features)}")
+    #print(f"{re_name}:")
+    # if re_name=='PCA':
+    #     print(f"Explained variance ratio sum {sum(re.explained_variance_ratio_)}")
+    #     #print(f"Explained variance ratios {re.explained_variance_ratio_}")
+    #     #print(f"Singular values {re.singular_values_}")
+    #     #print("Top ten features of first component:")
+    #     #pprint(sorted(list(zip(re.components_[0], feature_names)), reverse=True)[:10])
+    # if re_name=='NMF':
+    #     print(f"Error-norm ratio {re.reconstruction_err_/np.linalg.norm(bag_of_features)}")
     #KMEANS
     ###################################################
     #INCLUDE SECTION BELOW TO TEST DIFFERENT K VALUES
@@ -165,7 +162,7 @@ def reduce_cluster(reducer=PCA, components=30, clusters=10, features='sqr_attack
                 if re_name=='PCA':
                     lim=10
                 else:
-                    lim=15
+                    lim=35
                 mx=lim
                 piece=0
                 for n in range(1,7):
